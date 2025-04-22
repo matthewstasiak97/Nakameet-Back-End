@@ -96,3 +96,30 @@ export const signIn = async (req, res) => {
     res.status(500).json({ err: err.message });
   }
 };
+
+export const refreshToken = async (req, res) => {
+  try {
+    const user = await User.findById(req.user._id);
+    if (!user) {
+      return res.status(404).json({ err: "User not found" });
+    }
+    
+    const payload = { username: user.username, _id: user._id };
+    const token = jwt.sign({ payload }, process.env.JWT_SECRET);
+    
+    res.json({ token });
+  } catch (err) {
+    res.status(500).json({ err: err.message });
+  }
+};
+
+export const signOut = async (req, res) => {
+  try {
+    // Since JWT is stateless, we can't invalidate the token server-side
+    // Best practice is to remove the token from the client-side
+    // You could also implement a token blacklist if needed
+    res.status(200).json({ message: "Successfully signed out" });
+  } catch (err) {
+    res.status(500).json({ err: err.message });
+  }
+};

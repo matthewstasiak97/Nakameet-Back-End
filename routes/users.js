@@ -12,4 +12,5 @@ router.get("/sign-token", controllers.signToken);
 router.post("/sign-out", verifyToken, controllers.signOut);
 router.post("/refresh-token", verifyToken, controllers.refreshToken);
 
+
 export default router;

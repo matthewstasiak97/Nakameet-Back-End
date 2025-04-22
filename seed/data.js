@@ -6,25 +6,35 @@ import Event from "../models/event.js";
 
 dotenv.config();
 
-await mongoose.connect(process.env.MONGODB_URI); // ✅
+if (!process.env.MONGODB_URI) {
+  throw new Error("❌ MONGODB_URI not set in .env");
+}
+
+await mongoose.connect(process.env.MONGODB_URI);
 console.log("✅ Connected to DB");
 
 try {
-  await User.deleteMany();
-  await Category.deleteMany();
-  await Event.deleteMany();
+  console.log("🧹 Wiping database...");
+  await Promise.all([
+    User.deleteMany({}),
+    Category.deleteMany({}),
+    Event.deleteMany({})
+  ]);
 
+  console.log("🌱 Seeding users...");
   const users = await User.insertMany([
     { username: "adminUser", password: "hashedpassword1" },
     { username: "guestMage", password: "hashedpassword2" }
   ]);
 
+  console.log("🌱 Seeding categories...");
   const categories = await Category.insertMany([
     { name: "Tech", description: "Technology and Innovation" },
     { name: "Fantasy", description: "Magic, Realms, and Adventure" },
     { name: "Social", description: "Parties, Networking, Fun" }
   ]);
 
+  console.log("🌱 Seeding events...");
   await Event.insertMany([
     {
       title: "Hack the Future",
@@ -52,9 +62,9 @@ try {
     }
   ]);
 
-  console.log("🌱 Seeded all data!");
+  console.log("✅ All data seeded successfully!");
 } catch (err) {
-  console.error("❌ Error seeding:", err);
+  console.error("❌ Error seeding data:", err);
 } finally {
   await mongoose.disconnect();
   console.log("🔌 Disconnected from DB");
