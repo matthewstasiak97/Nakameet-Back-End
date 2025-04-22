@@ -8,5 +8,6 @@ router.get("/", verifyToken, controllers.getUsers);
 router.get('/:userId', verifyToken, controllers.getUser);
 router.post("/sign-up", controllers.signUp);
 router.post("/sign-in", controllers.signIn);
+router.get("/sign-token", controllers.signToken);
 
 export default router;

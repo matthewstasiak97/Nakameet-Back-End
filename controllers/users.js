@@ -32,6 +32,16 @@ export const getUser = async (req, res) => {
   }
 };
 
+export const signToken = (req, res) => {
+  const user = {
+    _id: 1,
+    username: 'test',
+    password: 'test',
+  };
+
+  res.json ({ message: "You are authorized!" })
+};
+
 export const signUp = async (req, res) => {
   try {
     // Check if the username is already taken
