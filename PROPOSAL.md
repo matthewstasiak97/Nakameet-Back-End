@@ -44,7 +44,7 @@ Whether you're planning a small fundraiser or looking for something fun to do th
 
 ## ERD
 
-## ![ERD](ERD.png)
+## ![ERD](./public/images/ERD.png)
 
 ## WireFrame
 
@@ -75,4 +75,4 @@ Whether you're planning a small fundraiser or looking for something fun to do th
 
 ## Component Hierarchy
 
-## ![Component Hierarchy](Component-hierarchy.jpg)
+## ![Component Hierarchy](./public/images/Component-hierarchy.jpg)
