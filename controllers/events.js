@@ -1,4 +1,9 @@
 import Event from "../models/event.js";
+import User from "../models/user.js";
+import Category from "../models/category.js";
+import mongoose from "mongoose";
+
+
 
 export const getEvents = async (req, res) => {
   try {

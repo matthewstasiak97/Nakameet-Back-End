@@ -1,5 +1,6 @@
 import { Router } from "express";
 import * as controllers from "../controllers/events.js";
+import verifyToken from "../middleware/verify-token.js";
 
 const router = Router();
 
