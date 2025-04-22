@@ -35,7 +35,7 @@ Whether you're planning a small fundraiser or looking for something fun to do th
 | Monday    |     | Create timeline, team guidelines, ERD, proposal, wirefram, US |          |                 |
 | Tuesday   |     | Work on back-end/ Postman/ routes                             |          |                 |
 | Wednesday |     | Work on front-end                                             |          |                 |
-| Thursday  |     | Work on functionaility                                        |          |                 |
+| Thursday  |     | Front-End completed                                           |          |                 |
 | Friday    |     | Work on CSS, add one or two stretch goals, deploy app, Heroku |          |                 |
 | Saturday  |     | Improve CSS, work with Alex during OO on errors               |          |                 |
 | Monday    |     | Present Project to class                                      |          |                 |
@@ -48,7 +48,7 @@ Whether you're planning a small fundraiser or looking for something fun to do th
 
 ## WireFrame
 
-## ![Landing Page](Landing-Page.jpg)
+## ![Landing Page](Landing-page.jpg)
 
 ## ![Event Page](event-page.jpg)
 
@@ -60,20 +60,20 @@ Whether you're planning a small fundraiser or looking for something fun to do th
 
 ## Routes
 
-| Method   | Path               | Component        | Description                               |
-| -------- | ------------------ | ---------------- | ----------------------------------------- |
-| `GET`    | `/`                | `Home.jsx`       | Public landing page                       |
-| `GET`    | `/login`           | `Login.jsx`      | Display login form                        |
-| `POST`   | `/login`           | `Login.jsx`      | Submits login credentials                 |
-| `GET`    | `/register`        | `Register.jsx`   | Display registration form                 |
-| `POST`   | `/register`        | `Register.jsx`   | Submits new user data                     |
-| `POST`   | `/logout`          | `Logout.jsx`     | Handles user logout and redirect          |
-| `GET`    | `/dashboard`       | `Dashboard.jsx`  | User dashboard after login                |
-| `GET`    | `/events`          | `EventIndex.jsx` | View all events                           |
-| `GET`    | `/events/new`      | `EventNew.jsx`   | Form to create a new event                |
-| `POST`   | `/events/new`      | `EventNew.jsx`   | Submit new event to backend               |
-| `GET`    | `/events/:id`      | `EventShow.jsx`  | View specific event details               |
-| `GET`    | `/events/:id/edit` | `EventEdit.jsx`  | Form to edit an existing event            |
-| `PUT`    | `/events/:id/edit` | `EventEdit.jsx`  | Submit updated event details              |
-| `DELETE` | `/events/:id`      | `EventShow.jsx`  | Delete event via UI (e.g., delete button) |
-| `GET`    | `*`                | `NotFound.jsx`   | Fallback for undefined routes (404 page)  |
+| Method   | Path          | Description                               |
+| -------- | ------------- | ----------------------------------------- |
+| `POST`   | `/sign-in`    | Submits login credentials                 |
+| `POST`   | `/sign-up`    | Submits new user data                     |
+| `POST`   | `/signout`    | Handles user logout and redirect          |
+| `GET`    | `/events`     | View all events                           |
+| `POST`   | `/events`     | Submit new event to backend               |
+| `GET`    | `/events/:id` | View specific event details               |
+| `PUT`    | `/events/:id` | Submit updated event details              |
+| `DELETE` | `/events/:id` | Delete event via UI (e.g., delete button) |
+| `GET`    | `*`           | Fallback for undefined routes (404 page)  |
+
+---
+
+## Component Hierarchy
+
+## ![Component Hierarchy](Component-hierarchy.jpg)
