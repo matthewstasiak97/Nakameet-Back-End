@@ -32,7 +32,7 @@ Whether you're planning a small fundraiser or looking for something fun to do th
 
 | Day       |     | Task                                                          | Blockers | Notes/ Thoughts |
 | --------- | --- | ------------------------------------------------------------- | -------- | --------------- |
-| Monday    |     | Create timeline, team guidelines, ERD, proposal, wirefram, US |          |                 |
+| Monday    |     | Create timeline, team guidelines, ERD, proposal, wireframe, US |          |                 |
 | Tuesday   |     | Work on back-end/ Postman/ routes                             |          |                 |
 | Wednesday |     | Work on front-end                                             |          |                 |
 | Thursday  |     | Front-End completed                                           |          |                 |
@@ -48,15 +48,14 @@ Whether you're planning a small fundraiser or looking for something fun to do th
 
 ## WireFrame
 
-## ![Landing Page](Landing-page.jpg)
+## ![Landing Page](./public/images/Landing-Page.jpg)
+## ![Event Page](./public/images/event-page.jpg)
 
-## ![Event Page](event-page.jpg)
+## ![Create Event](./public/images/create-event.jpg)
 
-## ![Create Event](create-event.jpg)
+## ![Log In](./public/images/log-in.jpg)
 
-## ![Log In](log-in.jpg)
-
-## ![Sign Up](sign-up.jpg)
+## ![Sign Up](./public/images/sign-up.jpg)
 
 ## Routes
 
