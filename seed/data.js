@@ -16,13 +16,13 @@ try {
 
   const users = await User.insertMany([
     { username: "adminUser", password: "hashedpassword1" },
-    { username: "guestMage", password: "hashedpassword2" }
+    { username: "guestMage", password: "hashedpassword2" },
   ]);
 
   const categories = await Category.insertMany([
     { name: "Tech", description: "Technology and Innovation" },
     { name: "Fantasy", description: "Magic, Realms, and Adventure" },
-    { name: "Social", description: "Parties, Networking, Fun" }
+    { name: "Social", description: "Parties, Networking, Fun" },
   ]);
 
   await Event.insertMany([
@@ -32,14 +32,14 @@ try {
       location: "Silicon Valley",
       date_time: new Date("2025-06-10T10:00:00"),
       user_id: users[0]._id,
-      category_id: categories[0]._id
+      category_id: categories[0]._id,
     },
     {
       name: "Milo",
       age: 7,
       breed: "Long-haired White Siberian Cat",
     },
-  ];
+  ]);
 
   await Event.create(events);
 
